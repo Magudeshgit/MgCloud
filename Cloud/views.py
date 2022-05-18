@@ -43,7 +43,6 @@ def Download(request,pk_download):
         return response
 def Delete(request,pk_delete):
      delof = fp.objects.get(id=pk_delete)
-     delof = delof.file.path
      delof.delete()
      pt = delof.file.path
      os.remove(pt)
