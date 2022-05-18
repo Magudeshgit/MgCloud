@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+	<link rel="icon" href="{% static 'Images/favicon.svg'%}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/nav.css' %}">
+</head>
+<body class="body">
+	<div class="nav">
+			<div class="logo-wrap">
+				<img src="{%static 'images/bigl.svg'%}">
+			</div>
+			<div class="hamburg">
+		    	<img src="{% static 'images/nav.svg' %}">
+		    </div>
+			<div class="side-bar">
+				<div class="clci">
+					<img src="{%static 'images/Exit.svg'%}">
+				</div>
+				<div class="nav-links">
+    			<ul>
+    				<li><a href="/" class="nav-anchor"><ion-icon name="home-outline"></ion-icon>Home</a></li>
+
+    				<li><a href="/Files" class="nav-anchor"><ion-icon name="document-text-outline"></ion-icon>Files</a></li>
+
+    				<li><a href="/About" class="nav-anchor"><ion-icon name="reader-outline"></ion-icon>About</a></li>
+    				
+    				<li><a href="/logout" class="nav-anchor"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>    				
+    				<li class="close"><a class="nav-anchor close">Close</a></li>
+    			</ul>
+    		    </div>
+			</div>
+    	</div>
+	</div>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script type="text/javascript">
+	let ham_btn = document.querySelector('.hamburg')
+	let bar = document.querySelector('.side-bar')
+	let close = document.querySelector('.clci')
+	let ct = document.querySelector('.close')
+	let body = document.getElementsByTagName('body')[0]
+	ham_btn.addEventListener('click', prfunc)
+	close.addEventListener('click', exfunc)
+	ct.addEventListener('click', exfunc)
+	function prfunc() {
+		bar.classList.toggle('active')
+		ham_btn.classList.toggle('active')
+	};
+	function exfunc(){
+		bar.classList.toggle('active')
+	}
+	</script>
+</body>
+</html>

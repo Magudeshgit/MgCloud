@@ -1,0 +1,49 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MGCloud || Files</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/Content.css' %}">
+</head>
+<body>
+	{%include 'Cloud/nav.html'%}
+	<div class="parent">
+		<div class="content">
+
+			{% for files in user.Key.all %}
+			<div class="tiles">
+				<div class="left-cont">
+				<div class="img-wrap">
+					<img src="{%static 'images/icons8-file.svg'%}" alt="" class="img">
+				</div>
+				<div class="cont-div">
+					<p class="cont-txt Raleway filename">{{files.file}}</p>
+					<p class="cont-txt Poppins">
+						{{files.file.size|filesizeformat}}
+					</p>
+				</div>
+			    </div>
+			    <div class="right-cont">
+			    	<div class="rcont">
+						<a href="{%url 'Download' files.id%}" class="btns-anc down"><i class="zmdi zmdi-cloud-download"></i></a>
+						<a href="{%url 'Delete' files.id%}" class="btns-anc del"><i class="zmdi zmdi-delete"></i></a>
+			    		<a href="{%url 'Open' files.id%}" class="btns-anc del"><i class="zmdi zmdi-open-in-new"></i></a>
+			    	</div>
+			    </div>
+
+			</div>
+			<div class="line"></div>
+			{%empty%}
+			<p class='none-txt Raleway'>There are No Files here, Save files to View Here</p>
+		    </div>
+		    {%endfor%}
+		</div>
+	</div>
+</body>
+</html>

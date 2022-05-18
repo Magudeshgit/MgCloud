@@ -1,0 +1,94 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MGcloud || Sign In</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css'%}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'styles/Auth.css'%}">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title"><u>MGCloud</u></h2>
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="POST" class="register-form" id="register-form">
+                            {%csrf_token%}
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                {{Createform.username}} 
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                {{Createform.email}}
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                {{Createform.password1}}
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                {{Createform.password2}}
+                            </div>
+                            <div class="form-group">
+                                <p>{{Createform.errors}}</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term"/>
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Show Password</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="{% static 'images/signup-image.jpg'%}" alt="sing up image"></figure>
+                        <a href="/SignIn" class="signup-image-link">I am already a member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript">
+            let us = document.getElementsByTagName('input')
+            us[1].placeholder = 'Username'
+            us[2].placeholder = 'Email'
+            us[3].placeholder = 'Password'
+            us[4].placeholder = 'Re-Enter Password'
+            us[3].classList.add('passw')
+            us[4].classList.add('passw2')
+        </script>
+        <!-- Sing in  Form -->
+       
+
+    </div>
+<script type="text/javascript">
+        let check = document.querySelector('.agree-term')
+        let passsint = document.querySelector('.passw')
+        let passsint2 = document.querySelector('.passw2')
+        check.addEventListener('change', function(){
+            if (this.checked){
+                passsint.type="text";
+                passsint2.type="text";}
+
+            else{
+                passsint.type="password";
+                passsint2.type="password";
+            }
+        })
+    </script>
+    
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

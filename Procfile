@@ -1,0 +1,1 @@
+web: gunicorn MGcloud.wsgi --log-file -

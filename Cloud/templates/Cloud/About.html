@@ -1,0 +1,48 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="{%static 'styles/About.css'%}">
+</head>
+<body>
+	{%include 'Cloud/nav.html'%}
+	<div class="parent">
+		<div class="abt-sec">
+			<p class="abt-head ul">About</p>
+			<p class="abt">MgCloud was built for convenience and reliability of your files across the planet with trust and security, MgCloud offers you a 100gb conserved storage space to save your files and memories. Files saved in MgCloud are <strong>Secure Reliable Convenient</strong> and can be accesed anywhere there is internet</p>
+		</div>
+		<div class="tech-sec">
+			<p class="tech-head ul">Technologies used</p>
+			<div class="tico-wrap">
+			<div class="tech-ico vr-flex">
+				<img src="{%static 'images/html.svg'%}" alt="">
+				<p class="tech-txt">HTML</p>
+			</div>
+			<div class="tech-ico vr-flex">
+				<img src="{%static 'images/css.svg'%}" alt="">
+				<p class="tech-txt">CSS</p>
+			</div>
+			<div class="tech-ico vr-flex">
+				<img src="{%static 'images/js.svg'%}" alt="">
+				<p class="tech-txt">JS</p>
+			</div>
+			<div class="tech-ico vr-flex">
+				<img src="{%static 'images/py.svg'%}" alt="">
+				<p class="tech-txt">Python</p>
+			</div>
+			<div class="tech-ico vr-flex">
+				<img src="{%static 'images/dj.svg'%}" alt="">
+				<p class="tech-txt">Django</p>
+			</div>
+			</div>
+		</div>
+		<div class="dev-sec">
+			<p class="dev-head ul">Developer Info</p>
+			<p class="dev"><ion-icon name="person-outline"></ion-icon>Magudesh<br><ion-icon name="code-outline"></ion-icon>Full Stack Web Developer<br><ion-icon name="school-outline"></ion-icon>Specializes in Django Back-End<br><ion-icon name="mail-outline"></ion-icon>magudeshofficial@gmail.com</p>
+		</div>
+	</div>
+</body>
+</html>

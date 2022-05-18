@@ -1,0 +1,115 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+html
+{
+	font-size: 62.5rem;
+	font-family: 'Poppins', sans-serif;
+}
+.parent
+{
+	width: 100%;
+	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	border: none;
+	background: inherit;
+}
+.header
+{
+	font-size: 3.2rem;
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+}
+.formdiv
+{
+	width: 50%;
+}
+.form
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70%;
+	height: 250px;
+	box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.25);
+	position: relative;
+	transition: 1s;
+	font-size: 2rem;
+	border: 2px dashed #141414;
+
+}
+.form:hover
+{
+	box-shadow: -5px -5px 10px 5px rgba(0, 0, 0, 0.25);
+    box-shadow:	5px 5px 10px 5px rgba(0,0,0,0,0.25);
+	/*background: rgba(255, 255, 255, 0.6);*/
+}
+.form.dz-started
+{
+	background: rgba(196, 196, 196, 0.5);
+	outline: none;
+	border: none;
+}
+.dz-message
+{
+	margin: 0 0 !important;
+}
+
+.int
+{
+	border: 2px solid black;
+	outline: none;
+	padding: 15px 10px 15px 10px;
+	background: transparent;
+	margin: 20px;
+	font-size: 20px;
+	color: black;
+}
+.select-int
+{
+	border: 2px solid black;
+	outline: none;
+	padding: 15px 10px 15px 10px;
+	background: transparent;
+	margin: 20px;
+	font-size: 20px;
+}
+.sub
+{
+	font-size: 25px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 1s;
+	color: white;
+	background: #141414;
+	width: 100%;
+	padding: 10px 5px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+}
+.sub:hover
+{
+	background: black;
+	color: white;
+}
+span
+{
+	display: none;
+}
+@media (max-width: 900px)
+{
+	.formdiv
+	{
+		width: 100%;
+	}
+}

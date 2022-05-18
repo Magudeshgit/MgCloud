@@ -1,0 +1,121 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html
+{
+	font-size: 62.5%;
+}
+.parent
+{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.Raleway
+{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+}
+.Poppins
+{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 100;
+}
+.content
+{
+	width: 70%;
+	height: 50%;
+	background: #FFF;
+	box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.25);
+	padding: 20px 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.cont-txt
+{
+	font-size: 2rem;
+}
+.filename
+{
+	max-width: 96px;
+	text-overflow: ellipsis;
+}
+.resize
+{
+	max-width: 35%;
+}
+.tiles
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 5px;
+	width: 100%;
+}
+.left-cont
+{
+	display: flex;
+	align-items: center;
+}
+.img-wrap
+{
+	max-width: 35%;
+}
+.img
+{
+	max-width: 100%;
+}
+.line
+{
+	width: 90%;
+	background: black;
+	height: 1px;
+}
+.tile-wrap
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.rcont
+{
+	display: flex;
+	justify-content: space-between;
+}
+.btns
+{
+	/*margin: 5px 25px;*/
+	max-width: 100%;
+	cursor: pointer;
+}
+.lkads
+{
+	max-width: 50%;
+}
+.zmdi
+{
+	color: black;
+	font-size: 5rem;
+	margin: 5px 10px;
+}
+.cont-div
+{
+	text-overflow: clip;
+	overflow: hidden;
+	white-space: nowrap;
+}
+@media (max-width: 700px)
+{
+	.content
+	{
+		width: 90%;
+	}
+}
+.none-txt
+{
+	font-size: 2rem;
+}
