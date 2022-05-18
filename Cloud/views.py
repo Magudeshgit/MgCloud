@@ -13,7 +13,7 @@ def Home(request):
 	if request.method == 'POST':
 		FileSave = FileUpload(request.POST,request.FILES)
 		print(FileSave.errors)
-		print(request.FILES)
+		#print(request.FILES)
 		if FileSave.is_valid():
 			FSave = FileSave.save()
 			request.user.Key.add(FSave)
@@ -29,7 +29,7 @@ def Home(request):
 
 def Files(request):
 	Files = fp.objects.all()
-	print(request.user)
+	#print(request.user)
 	return render(request, 'Cloud/Files.html' )
 
 def About(request):

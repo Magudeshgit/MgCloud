@@ -102,6 +102,14 @@ html
 	background: black;
 	color: white;
 }
+.dz-remove
+{
+	width: 100%;
+    text-decoration: none;
+    color: black;
+    background: #C4C4C4;
+    border-radius: 10px 10px 20px 20px;
+}
 span
 {
 	display: none;
