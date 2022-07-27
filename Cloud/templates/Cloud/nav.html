@@ -10,6 +10,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/Group 4.ico'%}"/>
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/nav.css' %}">
+
+	<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 <body class="body">
 	<div class="nav">
@@ -41,6 +43,9 @@
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	<script type="text/javascript">
+		
+	ScrollReveal().reveal('.main')
+
 	let ham_btn = document.querySelector('.hamburg')
 	let bar = document.querySelector('.side-bar')
 	let close = document.querySelector('.clci')

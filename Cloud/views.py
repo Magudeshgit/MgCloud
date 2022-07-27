@@ -3,10 +3,33 @@ from django.http import FileResponse, HttpResponse
 from .forms import FileUpload
 from django.contrib.auth.decorators import login_required
 from .models import FileUpload as fp
+from firebase_admin import credentials, firestore, storage, initialize_app
+from firebase_admin import db as jk
 import os
 import mimetypes
+import firebase_admin
+from pathlib import Path
+#from . import credential as kh
+
 # Create your views here.
 
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+if not firebase_admin._apps:
+	# Use a service account
+	cred = credentials.Certificate(str(BASE_DIR)+'\\Cloud\\credential.json')
+	firebase_admin.initialize_app(cred, {'databaseURL': "https://mgcloud-dd822-default-rtdb.firebaseio.com"})
+	#db = firestore.client()
+	db=storage.Bucket(name='mgcloud-dd822.appspot.com')
+	#op = jk.reference('tests')
+	print(op.get())
+	print(op)
+else:
+	#db=storage.bucket(name='mgcloud-dd822.appspot.com')
+	op = jk.reference('tests')
+	print(op.get())
+	print(op)
 @login_required(login_url='SignIn/')
 def Home(request):
 	Upload = FileUpload()

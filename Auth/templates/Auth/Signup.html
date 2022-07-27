@@ -8,6 +8,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/Group 4.ico'%}"/>
     <title>MGcloud || Create an Account</title>
 
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
     <!-- Font Icon -->
     <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css'%}">
 
@@ -63,6 +66,8 @@
             </div>
         </section>
         <script type="text/javascript">
+            let mn = document.querySelector('.main')
+            ScrollReveal().reveal('.main')
             let us = document.getElementsByTagName('input')
             us[1].placeholder = 'Username'
             us[2].placeholder = 'Email'

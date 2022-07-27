@@ -8,6 +8,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/Group 4.ico'%}"/>
 	<link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css'%}">
 
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
     <!-- Main css -->
     <link rel="stylesheet" href="{% static 'styles/Auth.css'%}">
 </head>
@@ -59,6 +61,7 @@
     <script type="text/javascript">
     	let check = document.querySelector('.agree-term')
     	let passsint = document.querySelector('#your_pass')
+        ScrollReveal().reveal('.main')
     	check.addEventListener('change', function(){
         	if (this.checked){
         		passsint.type="text";

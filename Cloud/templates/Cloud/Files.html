@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css'%}">
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/Content.css' %}">
+	<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 <body>
 	{%include 'Cloud/nav.html'%}
@@ -46,5 +47,8 @@
 		    {%endfor%}
 		</div>
 	</div>
+	<script type="text/javascript">
+		ScrollReveal().reveal('.parent',{delay: 2000})
+	</script>
 </body>
 </html>
